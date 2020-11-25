@@ -50,6 +50,19 @@ class BodyWidget extends StatelessWidget {
           },
         ),
 
+        ListTile(  // Третий ListTile
+          leading: CircleAvatar(
+            backgroundColor: Colors.purple,
+          ),
+          title: Text('BMW'),
+          subtitle: Text('BMW - Bayerische Motoren Werke AG'),
+          trailing: Icon(Icons.keyboard_arrow_right), // Заменили иконку на стрелку вниз
+          onTap: () {
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('Hello BMW')));
+            print('Hello BMW'); // Заглушка выводит сообщение в консоль
+          },
+        ),
+
       ],
     );
   }
